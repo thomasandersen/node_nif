@@ -46,8 +46,8 @@ static Napi::Value getNifDetails(const Napi::CallbackInfo& info) {
                 for (uint32_t i = 0; i < texFiles.size(); i++) {
                     textures.Set(i, Napi::String::New(env, texFiles.at(i)));
                 }
-                obj.Set("Num Triangles", shape->GetNumTriangles());
-                obj.Set("Num Vertices", shape->GetNumVertices());
+                obj.Set("num_triangles", shape->GetNumTriangles());
+                obj.Set("num_vertices", shape->GetNumVertices());
 
                 obj.Set("textures", textures);
 
